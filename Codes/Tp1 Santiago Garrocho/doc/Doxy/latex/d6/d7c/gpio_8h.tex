@@ -1,0 +1,389 @@
+\hypertarget{gpio_8h}{}\doxysection{include/gpio.h File Reference}
+\label{gpio_8h}\index{include/gpio.h@{include/gpio.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for gpio.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{dd/df9/gpio_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{d9/dea/gpio_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gpio_8h_aeddeaf3fb88359682687726518b922e9}{reserved\+\_\+bits}}(x,  y,  z)~uint8\+\_\+t reserved\+\_\+bits\#\#x\mbox{[}z-\/y+1\mbox{]};
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} \{ \mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2faa258a8ca8e34cedcfba339d2463ae0c2a}{GPIO\+\_\+\+PORTB}} = 0
+, \mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2faa3266325667899f8d82c0624c493fda51}{GPIO\+\_\+\+PORTC}}
+, \mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2faa4db7e328496cabe7a12e3879f7be8e39}{GPIO\+\_\+\+PORTD}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indica el Puerto. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} \{ \newline
+\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23adb75bcba02ec80bb4a9773718438047d}{GPIO\+\_\+\+PIN0}} = 0
+, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23aa829aa9e491c03d6a8227d518b7fc8eb}{GPIO\+\_\+\+PIN1}}
+, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a57cb1d6a79365503d4134ae99f5251f7}{GPIO\+\_\+\+PIN2}}
+, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23aff3e33054e363ddc891e9397e2b2f6d0}{GPIO\+\_\+\+PIN3}}
+, \newline
+\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a088dbea6be5692ef5375d1710404ad46}{GPIO\+\_\+\+PIN4}}
+, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23ab3360105a3459dae07b5018c48ae30af}{GPIO\+\_\+\+PIN5}}
+, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a870953062f7dbc2a62c12e8cd5098202}{GPIO\+\_\+\+PIN6}}
+, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a0e9e1e2434aae274eb04b81c09fe1318}{GPIO\+\_\+\+PIN7}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indica el pin. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751e}{gpio\+\_\+mode\+\_\+e}} \{ \mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751eaa1ea38ffc304a6c32480a65b5fec7302}{GPIO\+\_\+\+INPUT}} = 0
+, \mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751eaa248e73c1faee9c6f072fd91569cf516}{GPIO\+\_\+\+OUTPUT}} = 0x1
+, \mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751eac64d4ce6ea6aecd186ccc66452e8efdf}{GPIO\+\_\+\+GPIO\+\_\+\+INPUT\+\_\+\+PU}} = 0x2
+ \}
+\begin{DoxyCompactList}\small\item\em Indica el Puerto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gpio_8h_a2608b9390e15e92eded45ee5e539f114}{GPIO\+\_\+\+Init\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin, \mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751e}{gpio\+\_\+mode\+\_\+e}} mode)
+\begin{DoxyCompactList}\small\item\em Función encargada de la inicialización de los pines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpio_8h_ac6b1af4659e23c428d1807d692fcf940}{GPIO\+\_\+\+Write\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin, bool value)
+\begin{DoxyCompactList}\small\item\em Función encargada de escribir los pines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpio_8h_a9497ea0ce904a1b4b191ac5e6ac90bec}{GPIO\+\_\+\+Toggle\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin)
+\begin{DoxyCompactList}\small\item\em Función encargada de invertir el valor del pin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{gpio_8h_a712d82ddc56e6593882b9c648315f829}{GPIO\+\_\+\+Read\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin, bool value)
+\item 
+void \mbox{\hyperlink{gpio_8h_afe43c87960a28792e83602763bb99370}{GPIO\+\_\+\+Write\+Port}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Función encargada de escribir el valor del puerto. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{gpio_8h_a7b07bc86ce19a532662f3c24dc348e46}{GPIO\+\_\+\+Read\+Port}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port)
+\begin{DoxyCompactList}\small\item\em Función encargada de leer el valor del puerto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gpio_8h_aeddeaf3fb88359682687726518b922e9}\label{gpio_8h_aeddeaf3fb88359682687726518b922e9}} 
+\index{gpio.h@{gpio.h}!reserved\_bits@{reserved\_bits}}
+\index{reserved\_bits@{reserved\_bits}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{reserved\_bits}{reserved\_bits}}
+{\footnotesize\ttfamily \#define reserved\+\_\+bits(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z }\end{DoxyParamCaption})~uint8\+\_\+t reserved\+\_\+bits\#\#x\mbox{[}z-\/y+1\mbox{]};}
+
+
+
+Definition at line 34 of file gpio.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{gpio_8h_afbc1d816b96a35025168412011d0751e}\label{gpio_8h_afbc1d816b96a35025168412011d0751e}} 
+\index{gpio.h@{gpio.h}!gpio\_mode\_e@{gpio\_mode\_e}}
+\index{gpio\_mode\_e@{gpio\_mode\_e}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_mode\_e}{gpio\_mode\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751e}{gpio\+\_\+mode\+\_\+e}}}
+
+
+
+Indica el Puerto. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolas Ferragamo \href{mailto:nferragamo@frba.utn.edu.ar}{\texttt{ nferragamo@frba.\+utn.\+edu.\+ar}} 
+\end{DoxyAuthor}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_INPUT@{GPIO\_INPUT}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_INPUT@{GPIO\_INPUT}}}\mbox{\Hypertarget{gpio_8h_afbc1d816b96a35025168412011d0751eaa1ea38ffc304a6c32480a65b5fec7302}\label{gpio_8h_afbc1d816b96a35025168412011d0751eaa1ea38ffc304a6c32480a65b5fec7302}} 
+GPIO\+\_\+\+INPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_OUTPUT@{GPIO\_OUTPUT}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_OUTPUT@{GPIO\_OUTPUT}}}\mbox{\Hypertarget{gpio_8h_afbc1d816b96a35025168412011d0751eaa248e73c1faee9c6f072fd91569cf516}\label{gpio_8h_afbc1d816b96a35025168412011d0751eaa248e73c1faee9c6f072fd91569cf516}} 
+GPIO\+\_\+\+OUTPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_GPIO\_INPUT\_PU@{GPIO\_GPIO\_INPUT\_PU}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_GPIO\_INPUT\_PU@{GPIO\_GPIO\_INPUT\_PU}}}\mbox{\Hypertarget{gpio_8h_afbc1d816b96a35025168412011d0751eac64d4ce6ea6aecd186ccc66452e8efdf}\label{gpio_8h_afbc1d816b96a35025168412011d0751eac64d4ce6ea6aecd186ccc66452e8efdf}} 
+GPIO\+\_\+\+GPIO\+\_\+\+INPUT\+\_\+\+PU&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 77 of file gpio.\+h.
+
+\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}} 
+\index{gpio.h@{gpio.h}!gpio\_pin\_e@{gpio\_pin\_e}}
+\index{gpio\_pin\_e@{gpio\_pin\_e}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_pin\_e}{gpio\_pin\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}
+
+
+
+Indica el pin. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolas Ferragamo \href{mailto:nferragamo@frba.utn.edu.ar}{\texttt{ nferragamo@frba.\+utn.\+edu.\+ar}} 
+\end{DoxyAuthor}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN0@{GPIO\_PIN0}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN0@{GPIO\_PIN0}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23adb75bcba02ec80bb4a9773718438047d}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23adb75bcba02ec80bb4a9773718438047d}} 
+GPIO\+\_\+\+PIN0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN1@{GPIO\_PIN1}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN1@{GPIO\_PIN1}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23aa829aa9e491c03d6a8227d518b7fc8eb}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23aa829aa9e491c03d6a8227d518b7fc8eb}} 
+GPIO\+\_\+\+PIN1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN2@{GPIO\_PIN2}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN2@{GPIO\_PIN2}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a57cb1d6a79365503d4134ae99f5251f7}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a57cb1d6a79365503d4134ae99f5251f7}} 
+GPIO\+\_\+\+PIN2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN3@{GPIO\_PIN3}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN3@{GPIO\_PIN3}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23aff3e33054e363ddc891e9397e2b2f6d0}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23aff3e33054e363ddc891e9397e2b2f6d0}} 
+GPIO\+\_\+\+PIN3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN4@{GPIO\_PIN4}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN4@{GPIO\_PIN4}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a088dbea6be5692ef5375d1710404ad46}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a088dbea6be5692ef5375d1710404ad46}} 
+GPIO\+\_\+\+PIN4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN5@{GPIO\_PIN5}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN5@{GPIO\_PIN5}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23ab3360105a3459dae07b5018c48ae30af}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23ab3360105a3459dae07b5018c48ae30af}} 
+GPIO\+\_\+\+PIN5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN6@{GPIO\_PIN6}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN6@{GPIO\_PIN6}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a870953062f7dbc2a62c12e8cd5098202}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a870953062f7dbc2a62c12e8cd5098202}} 
+GPIO\+\_\+\+PIN6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PIN7@{GPIO\_PIN7}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PIN7@{GPIO\_PIN7}}}\mbox{\Hypertarget{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a0e9e1e2434aae274eb04b81c09fe1318}\label{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23a0e9e1e2434aae274eb04b81c09fe1318}} 
+GPIO\+\_\+\+PIN7&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 58 of file gpio.\+h.
+
+\mbox{\Hypertarget{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}\label{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}} 
+\index{gpio.h@{gpio.h}!gpio\_port\_e@{gpio\_port\_e}}
+\index{gpio\_port\_e@{gpio\_port\_e}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{gpio\_port\_e}{gpio\_port\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}
+
+
+
+Indica el Puerto. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolas Ferragamo \href{mailto:nferragamo@frba.utn.edu.ar}{\texttt{ nferragamo@frba.\+utn.\+edu.\+ar}} 
+\end{DoxyAuthor}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PORTB@{GPIO\_PORTB}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PORTB@{GPIO\_PORTB}}}\mbox{\Hypertarget{gpio_8h_a23837cb0f2168984984f6cde5307f2faa258a8ca8e34cedcfba339d2463ae0c2a}\label{gpio_8h_a23837cb0f2168984984f6cde5307f2faa258a8ca8e34cedcfba339d2463ae0c2a}} 
+GPIO\+\_\+\+PORTB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PORTC@{GPIO\_PORTC}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PORTC@{GPIO\_PORTC}}}\mbox{\Hypertarget{gpio_8h_a23837cb0f2168984984f6cde5307f2faa3266325667899f8d82c0624c493fda51}\label{gpio_8h_a23837cb0f2168984984f6cde5307f2faa3266325667899f8d82c0624c493fda51}} 
+GPIO\+\_\+\+PORTC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPIO\_PORTD@{GPIO\_PORTD}!gpio.h@{gpio.h}}\index{gpio.h@{gpio.h}!GPIO\_PORTD@{GPIO\_PORTD}}}\mbox{\Hypertarget{gpio_8h_a23837cb0f2168984984f6cde5307f2faa4db7e328496cabe7a12e3879f7be8e39}\label{gpio_8h_a23837cb0f2168984984f6cde5307f2faa4db7e328496cabe7a12e3879f7be8e39}} 
+GPIO\+\_\+\+PORTD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 45 of file gpio.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpio_8h_a2608b9390e15e92eded45ee5e539f114}\label{gpio_8h_a2608b9390e15e92eded45ee5e539f114}} 
+\index{gpio.h@{gpio.h}!GPIO\_InitPin@{GPIO\_InitPin}}
+\index{GPIO\_InitPin@{GPIO\_InitPin}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_InitPin()}{GPIO\_InitPin()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Init\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin,  }\item[{\mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751e}{gpio\+\_\+mode\+\_\+e}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Función encargada de la inicialización de los pines. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+{\em mode} & \mbox{[}in\mbox{]} Modo del pin GPIO\+\_\+\+OUTPUT, GPIO\+\_\+\+INPUT, GPIO\+\_\+\+INPUT\+\_\+\+PU \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file gpio.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{d6/d7c/gpio_8h_a2608b9390e15e92eded45ee5e539f114_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpio_8h_a712d82ddc56e6593882b9c648315f829}\label{gpio_8h_a712d82ddc56e6593882b9c648315f829}} 
+\index{gpio.h@{gpio.h}!GPIO\_ReadPin@{GPIO\_ReadPin}}
+\index{GPIO\_ReadPin@{GPIO\_ReadPin}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_ReadPin()}{GPIO\_ReadPin()}}
+{\footnotesize\ttfamily bool GPIO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin,  }\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 119 of file gpio.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d6/d7c/gpio_8h_a712d82ddc56e6593882b9c648315f829_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpio_8h_a7b07bc86ce19a532662f3c24dc348e46}\label{gpio_8h_a7b07bc86ce19a532662f3c24dc348e46}} 
+\index{gpio.h@{gpio.h}!GPIO\_ReadPort@{GPIO\_ReadPort}}
+\index{GPIO\_ReadPort@{GPIO\_ReadPort}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_ReadPort()}{GPIO\_ReadPort()}}
+{\footnotesize\ttfamily uint8\+\_\+t GPIO\+\_\+\+Read\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Función encargada de leer el valor del puerto. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+: el valor del puerto 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8h_a9497ea0ce904a1b4b191ac5e6ac90bec}\label{gpio_8h_a9497ea0ce904a1b4b191ac5e6ac90bec}} 
+\index{gpio.h@{gpio.h}!GPIO\_TogglePin@{GPIO\_TogglePin}}
+\index{GPIO\_TogglePin@{GPIO\_TogglePin}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_TogglePin()}{GPIO\_TogglePin()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Toggle\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Función encargada de invertir el valor del pin. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8h_ac6b1af4659e23c428d1807d692fcf940}\label{gpio_8h_ac6b1af4659e23c428d1807d692fcf940}} 
+\index{gpio.h@{gpio.h}!GPIO\_WritePin@{GPIO\_WritePin}}
+\index{GPIO\_WritePin@{GPIO\_WritePin}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_WritePin()}{GPIO\_WritePin()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Función encargada de escribir los pines. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+{\em value} & \mbox{[}in\mbox{]} HIGH, LOW \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file gpio.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{d6/d7c/gpio_8h_ac6b1af4659e23c428d1807d692fcf940_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpio_8h_afe43c87960a28792e83602763bb99370}\label{gpio_8h_afe43c87960a28792e83602763bb99370}} 
+\index{gpio.h@{gpio.h}!GPIO\_WritePort@{GPIO\_WritePort}}
+\index{GPIO\_WritePort@{GPIO\_WritePort}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_WritePort()}{GPIO\_WritePort()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Write\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Función encargada de escribir el valor del puerto. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file gpio.\+c.
+

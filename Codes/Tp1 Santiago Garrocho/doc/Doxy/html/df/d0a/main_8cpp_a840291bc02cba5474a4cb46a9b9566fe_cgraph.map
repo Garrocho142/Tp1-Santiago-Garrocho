@@ -1,0 +1,6 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node2" href="$d8/da0/gpio_8c.html#a2608b9390e15e92eded45ee5e539f114" title="Función encargada de la inicialización de los pines." alt="" coords="111,5,209,32"/>
+<area shape="rect" id="node3" href="$d8/da0/gpio_8c.html#a712d82ddc56e6593882b9c648315f829" title=" " alt="" coords="104,56,216,83"/>
+<area shape="rect" id="node4" href="$d8/da0/gpio_8c.html#ac6b1af4659e23c428d1807d692fcf940" title="Función encargada de escribir los pines." alt="" coords="105,107,215,133"/>
+</map>

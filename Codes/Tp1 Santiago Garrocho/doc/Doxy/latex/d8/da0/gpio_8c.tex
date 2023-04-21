@@ -1,0 +1,300 @@
+\hypertarget{gpio_8c}{}\doxysection{src/gpio.c File Reference}
+\label{gpio_8c}\index{src/gpio.c@{src/gpio.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\newline
+Include dependency graph for gpio.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d5/d25/gpio_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gpio_8c_a14739152f72edadaac585880a25cd1a5}{GPIO\+\_\+\+BASE\+\_\+\+PIN\+\_\+\+ADDR}}~0x23
+\item 
+\#define \mbox{\hyperlink{gpio_8c_a359f07c76a3ff08f060f660440b1f57c}{GPIO\+\_\+\+BASE\+\_\+\+DDR\+\_\+\+ADDR}}~0x24
+\item 
+\#define \mbox{\hyperlink{gpio_8c_a2ab1b2342dcc7c8329fe17d062b7639d}{GPIO\+\_\+\+BASE\+\_\+\+PORT\+\_\+\+ADDR}}~0x25
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gpio_8c_a2608b9390e15e92eded45ee5e539f114}{GPIO\+\_\+\+Init\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin, \mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751e}{gpio\+\_\+mode\+\_\+e}} mode)
+\begin{DoxyCompactList}\small\item\em Función encargada de la inicialización de los pines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpio_8c_ac6b1af4659e23c428d1807d692fcf940}{GPIO\+\_\+\+Write\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin, bool value)
+\begin{DoxyCompactList}\small\item\em Función encargada de escribir los pines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpio_8c_a9497ea0ce904a1b4b191ac5e6ac90bec}{GPIO\+\_\+\+Toggle\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin)
+\begin{DoxyCompactList}\small\item\em Función encargada de invertir el valor del pin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{gpio_8c_a712d82ddc56e6593882b9c648315f829}{GPIO\+\_\+\+Read\+Pin}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, \mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}} pin, bool value)
+\item 
+void \mbox{\hyperlink{gpio_8c_a4f0f804cb467f9ea76f81b7a091a2f9c}{GPIO\+\_\+\+Write\+Port}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Función encargada de escribir el valor del puerto. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{gpio_8c_a7b07bc86ce19a532662f3c24dc348e46}{GPIO\+\_\+\+Read\+Port}} (\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}} port)
+\begin{DoxyCompactList}\small\item\em Función encargada de leer el valor del puerto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t $\ast$const \mbox{\hyperlink{gpio_8c_a9398887efb1e495ee8d033e247b533d9}{GPIO\+\_\+\+PIN}} = (uint8\+\_\+t$\ast$) \mbox{\hyperlink{gpio_8c_a14739152f72edadaac585880a25cd1a5}{GPIO\+\_\+\+BASE\+\_\+\+PIN\+\_\+\+ADDR}}
+\item 
+volatile uint8\+\_\+t $\ast$const \mbox{\hyperlink{gpio_8c_aab96761972a5be52bf1b7b2fb0dea706}{GPIO\+\_\+\+DDR}} = (uint8\+\_\+t$\ast$) \mbox{\hyperlink{gpio_8c_a359f07c76a3ff08f060f660440b1f57c}{GPIO\+\_\+\+BASE\+\_\+\+DDR\+\_\+\+ADDR}}
+\item 
+volatile uint8\+\_\+t $\ast$const \mbox{\hyperlink{gpio_8c_ac101ec27e91413a0ead144916ac3235e}{GPIO\+\_\+\+PORT}} = (uint8\+\_\+t$\ast$) \mbox{\hyperlink{gpio_8c_a2ab1b2342dcc7c8329fe17d062b7639d}{GPIO\+\_\+\+BASE\+\_\+\+PORT\+\_\+\+ADDR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gpio_8c_a359f07c76a3ff08f060f660440b1f57c}\label{gpio_8c_a359f07c76a3ff08f060f660440b1f57c}} 
+\index{gpio.c@{gpio.c}!GPIO\_BASE\_DDR\_ADDR@{GPIO\_BASE\_DDR\_ADDR}}
+\index{GPIO\_BASE\_DDR\_ADDR@{GPIO\_BASE\_DDR\_ADDR}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_BASE\_DDR\_ADDR}{GPIO\_BASE\_DDR\_ADDR}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+BASE\+\_\+\+DDR\+\_\+\+ADDR~0x24}
+
+
+
+Definition at line 23 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8c_a14739152f72edadaac585880a25cd1a5}\label{gpio_8c_a14739152f72edadaac585880a25cd1a5}} 
+\index{gpio.c@{gpio.c}!GPIO\_BASE\_PIN\_ADDR@{GPIO\_BASE\_PIN\_ADDR}}
+\index{GPIO\_BASE\_PIN\_ADDR@{GPIO\_BASE\_PIN\_ADDR}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_BASE\_PIN\_ADDR}{GPIO\_BASE\_PIN\_ADDR}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+BASE\+\_\+\+PIN\+\_\+\+ADDR~0x23}
+
+
+
+Definition at line 22 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8c_a2ab1b2342dcc7c8329fe17d062b7639d}\label{gpio_8c_a2ab1b2342dcc7c8329fe17d062b7639d}} 
+\index{gpio.c@{gpio.c}!GPIO\_BASE\_PORT\_ADDR@{GPIO\_BASE\_PORT\_ADDR}}
+\index{GPIO\_BASE\_PORT\_ADDR@{GPIO\_BASE\_PORT\_ADDR}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_BASE\_PORT\_ADDR}{GPIO\_BASE\_PORT\_ADDR}}
+{\footnotesize\ttfamily \#define GPIO\+\_\+\+BASE\+\_\+\+PORT\+\_\+\+ADDR~0x25}
+
+
+
+Definition at line 24 of file gpio.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpio_8c_a2608b9390e15e92eded45ee5e539f114}\label{gpio_8c_a2608b9390e15e92eded45ee5e539f114}} 
+\index{gpio.c@{gpio.c}!GPIO\_InitPin@{GPIO\_InitPin}}
+\index{GPIO\_InitPin@{GPIO\_InitPin}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_InitPin()}{GPIO\_InitPin()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Init\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin,  }\item[{\mbox{\hyperlink{gpio_8h_afbc1d816b96a35025168412011d0751e}{gpio\+\_\+mode\+\_\+e}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Función encargada de la inicialización de los pines. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+{\em mode} & \mbox{[}in\mbox{]} Modo del pin GPIO\+\_\+\+OUTPUT, GPIO\+\_\+\+INPUT, GPIO\+\_\+\+INPUT\+\_\+\+PU \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file gpio.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{d8/da0/gpio_8c_a2608b9390e15e92eded45ee5e539f114_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpio_8c_a712d82ddc56e6593882b9c648315f829}\label{gpio_8c_a712d82ddc56e6593882b9c648315f829}} 
+\index{gpio.c@{gpio.c}!GPIO\_ReadPin@{GPIO\_ReadPin}}
+\index{GPIO\_ReadPin@{GPIO\_ReadPin}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_ReadPin()}{GPIO\_ReadPin()}}
+{\footnotesize\ttfamily bool GPIO\+\_\+\+Read\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin,  }\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 119 of file gpio.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d8/da0/gpio_8c_a712d82ddc56e6593882b9c648315f829_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpio_8c_a7b07bc86ce19a532662f3c24dc348e46}\label{gpio_8c_a7b07bc86ce19a532662f3c24dc348e46}} 
+\index{gpio.c@{gpio.c}!GPIO\_ReadPort@{GPIO\_ReadPort}}
+\index{GPIO\_ReadPort@{GPIO\_ReadPort}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_ReadPort()}{GPIO\_ReadPort()}}
+{\footnotesize\ttfamily uint8\+\_\+t GPIO\+\_\+\+Read\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Función encargada de leer el valor del puerto. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value\+: el valor del puerto 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8c_a9497ea0ce904a1b4b191ac5e6ac90bec}\label{gpio_8c_a9497ea0ce904a1b4b191ac5e6ac90bec}} 
+\index{gpio.c@{gpio.c}!GPIO\_TogglePin@{GPIO\_TogglePin}}
+\index{GPIO\_TogglePin@{GPIO\_TogglePin}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_TogglePin()}{GPIO\_TogglePin()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Toggle\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Función encargada de invertir el valor del pin. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8c_ac6b1af4659e23c428d1807d692fcf940}\label{gpio_8c_ac6b1af4659e23c428d1807d692fcf940}} 
+\index{gpio.c@{gpio.c}!GPIO\_WritePin@{GPIO\_WritePin}}
+\index{GPIO\_WritePin@{GPIO\_WritePin}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_WritePin()}{GPIO\_WritePin()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Write\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{\mbox{\hyperlink{gpio_8h_a7a712e0d41821d7d605d9176ce0e1d23}{gpio\+\_\+pin\+\_\+e}}}]{pin,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Función encargada de escribir los pines. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+{\em value} & \mbox{[}in\mbox{]} HIGH, LOW \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file gpio.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{d8/da0/gpio_8c_ac6b1af4659e23c428d1807d692fcf940_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gpio_8c_a4f0f804cb467f9ea76f81b7a091a2f9c}\label{gpio_8c_a4f0f804cb467f9ea76f81b7a091a2f9c}} 
+\index{gpio.c@{gpio.c}!GPIO\_WritePort@{GPIO\_WritePort}}
+\index{GPIO\_WritePort@{GPIO\_WritePort}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_WritePort()}{GPIO\_WritePort()}}
+{\footnotesize\ttfamily GPIO\+\_\+\+Write\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gpio_8h_a23837cb0f2168984984f6cde5307f2fa}{gpio\+\_\+port\+\_\+e}}}]{port,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Función encargada de escribir el valor del puerto. 
+
+\begin{DoxyDate}{Date}
+\$\{date\} 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Nicolás Ferragamo 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & \mbox{[}in\mbox{]} Puerto B, C, D \\
+\hline
+{\em pin} & \mbox{[}in\mbox{]} pin 1,2 ... 7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file gpio.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{gpio_8c_aab96761972a5be52bf1b7b2fb0dea706}\label{gpio_8c_aab96761972a5be52bf1b7b2fb0dea706}} 
+\index{gpio.c@{gpio.c}!GPIO\_DDR@{GPIO\_DDR}}
+\index{GPIO\_DDR@{GPIO\_DDR}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_DDR}{GPIO\_DDR}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t$\ast$ const GPIO\+\_\+\+DDR = (uint8\+\_\+t$\ast$) \mbox{\hyperlink{gpio_8c_a359f07c76a3ff08f060f660440b1f57c}{GPIO\+\_\+\+BASE\+\_\+\+DDR\+\_\+\+ADDR}}}
+
+
+
+Definition at line 46 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8c_a9398887efb1e495ee8d033e247b533d9}\label{gpio_8c_a9398887efb1e495ee8d033e247b533d9}} 
+\index{gpio.c@{gpio.c}!GPIO\_PIN@{GPIO\_PIN}}
+\index{GPIO\_PIN@{GPIO\_PIN}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_PIN}{GPIO\_PIN}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t$\ast$ const GPIO\+\_\+\+PIN = (uint8\+\_\+t$\ast$) \mbox{\hyperlink{gpio_8c_a14739152f72edadaac585880a25cd1a5}{GPIO\+\_\+\+BASE\+\_\+\+PIN\+\_\+\+ADDR}}}
+
+
+
+Definition at line 45 of file gpio.\+c.
+
+\mbox{\Hypertarget{gpio_8c_ac101ec27e91413a0ead144916ac3235e}\label{gpio_8c_ac101ec27e91413a0ead144916ac3235e}} 
+\index{gpio.c@{gpio.c}!GPIO\_PORT@{GPIO\_PORT}}
+\index{GPIO\_PORT@{GPIO\_PORT}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{GPIO\_PORT}{GPIO\_PORT}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t$\ast$ const GPIO\+\_\+\+PORT = (uint8\+\_\+t$\ast$) \mbox{\hyperlink{gpio_8c_a2ab1b2342dcc7c8329fe17d062b7639d}{GPIO\+\_\+\+BASE\+\_\+\+PORT\+\_\+\+ADDR}}}
+
+
+
+Definition at line 47 of file gpio.\+c.
+
